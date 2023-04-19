@@ -85,7 +85,7 @@ int main(int argc, char** argv)
         images.push_back(argv[i]);
     }
 
-    for (i = 0; i < images.size(); i++)
+    for (i = 0; (unsigned long)i < images.size(); i++)
     {
         traitement = getImage(images[i]);
         traitement.convertTo(traitement, CV_32FC3);
